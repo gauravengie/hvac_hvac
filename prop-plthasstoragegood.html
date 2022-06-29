@@ -386,7 +386,7 @@
           
               <li class="second-level" style="line-height: 20px;" id="sd_2083"><a   href="prop-dctermsissued.html">dcterms:issued</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_2084"><a class="active"  href="prop-dctermslicense.html">dcterms:license</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_2084"><a   href="prop-dctermslicense.html">dcterms:license</a></li>
           
               <li class="second-level" style="line-height: 20px;" id="sd_2085"><a   href="prop-dctermsmodified.html">dcterms:modified</a></li>
           
@@ -396,7 +396,7 @@
           
               <li class="second-level" style="line-height: 20px;" id="sd_2093"><a   href="prop-plthassolarenergy.html">plt:hasSolarEnergy</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_2091"><a   href="prop-plthasstoragegood.html">plt:hasStorageGood</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_2091"><a class="active"  href="prop-plthasstoragegood.html">plt:hasStorageGood</a></li>
           
               <li class="second-level" style="line-height: 20px;" id="sd_2092"><a   href="prop-plthasstoragenominalcapacity.html">plt:hasStorageNominalCapacity</a></li>
           
@@ -512,7 +512,7 @@
           <a href="entities-tree-properties.html">Properties</a>
     </li>
       <li class="active">
-            http://purl.org/dc/terms/license
+            https://w3id.org/platoon/hasStorageGood
         </li>
   </ol>
 
@@ -533,7 +533,7 @@
 
             <h1>
 
-                dcterms:license
+                plt:hasStorageGood
                 
                     <small class="label label-info label-xs ">leaf node</small>
                   
@@ -552,7 +552,7 @@
                         <li><a href="entities-tree-properties.html">rdf:Property</a>
 
                           <ul>
-                            <li><a style="font-weight: bold;" title="'license'">dcterms:license</a>
+                            <li><a style="font-weight: bold;" title="'has Storage Good' - Link the storage system to its stored good.">plt:hasStorageGood</a>
 
                             
                               </li>
@@ -576,7 +576,7 @@
              </div>
              <div class="panel-body">
 
-                 <code>http://purl.org/dc/terms/license</code>
+                 <code>https://w3id.org/platoon/hasStorageGood</code>
              </div>
            </div>
             </div></div>
@@ -591,7 +591,7 @@
              </div>
              <div class="panel-body">
 
-                 license
+                 has Storage Good
              </div>
            </div>
             </div></div>
@@ -599,6 +599,18 @@
 
 
             
+            <div class="row"><div class="col-md-12">
+              <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Description</h3>
+            </div>
+            <div class="panel-body">
+
+                Link the storage system to its  stored good.
+            </div>
+          </div>
+           </div></div>
+           
 
 
 
@@ -623,17 +635,27 @@
                <tr>
                    <td>
                      
-                         <a>owl:Thing</a> (inferred)
+                         
+                         
+                              <a href="class-pltstoragesystem.html" title="https://w3id.org/platoon/StorageSystem">plt:StorageSystem</a>
+                           
+                           
+                         
                      
                    </td>
 
                     <td>
-                      dcterms:license
+                      plt:hasStorageGood
                     </td>
 
                     <td>
                       
-                          <a>owl:Thing</a> (inferred)
+                          
+                          
+                               <a href="class-pltstoragegoodproperty.html" title="https://w3id.org/platoon/StorageGoodProperty">plt:StorageGoodProperty</a>
+                            
+                            
+                          
                       
                     </td>
             </table>
@@ -652,10 +674,21 @@
 
                 
 
-                    <div class="highlight"><pre><span></span><span class="k">@prefix</span><span class="w"> </span><span class="nn">dcterms:</span><span class="w"> </span><span class="nv">&lt;http://purl.org/dc/terms/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
-<span class="k">@prefix</span><span class="w"> </span><span class="nn">owl:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2002/07/owl#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+                    <div class="highlight"><pre><span></span><span class="k">@prefix</span><span class="w"> </span><span class="nn">owl:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2002/07/owl#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">plt:</span><span class="w"> </span><span class="nv">&lt;https://w3id.org/platoon/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">rdfs:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">seas:</span><span class="w"> </span><span class="nv">&lt;https://w3id.org/seas/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">vs:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2003/06/sw-vocab-status/ns#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
 
-<span class="nn">dcterms:</span><span class="nt">license</span><span class="w"> </span><span class="kt">a</span><span class="w"> </span><span class="nn">owl:</span><span class="nt">AnnotationProperty</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="nn">plt:</span><span class="nt">hasStorageGood</span><span class="w"> </span><span class="kt">a</span><span class="w"> </span><span class="nn">owl:</span><span class="nt">FunctionalProperty</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nn">owl:</span><span class="nt">ObjectProperty</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">rdfs:</span><span class="nt">label</span><span class="w"> </span><span class="s">&quot;has Storage Good&quot;</span><span class="o">@</span><span class="ge">en</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">rdfs:</span><span class="nt">comment</span><span class="w"> </span><span class="s">&quot;Link the storage system to its  stored good.&quot;</span><span class="o">@</span><span class="ge">en</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">rdfs:</span><span class="nt">domain</span><span class="w"> </span><span class="nn">plt:</span><span class="nt">StorageSystem</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">rdfs:</span><span class="nt">isDefinedBy</span><span class="w"> </span><span class="nn">plt:</span><span class="nt">StorageSystemOntology</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">rdfs:</span><span class="nt">range</span><span class="w"> </span><span class="nn">plt:</span><span class="nt">StorageGoodProperty</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">rdfs:</span><span class="nt">subPropertyOf</span><span class="w"> </span><span class="nn">seas:</span><span class="nt">hasProperty</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">vs:</span><span class="nt">term_status</span><span class="w"> </span><span class="s">&quot;testing&quot;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
 </pre></div>
 
 
@@ -755,7 +788,7 @@ $('#search-input-sidebar').keyup(function() {
 
     $(document).ready(function (){
       $('#sidebar-wrapper').animate({
-          scrollTop: $("#sd_2084").offset().top - 100
+          scrollTop: $("#sd_2091").offset().top - 100
       }, 100);
     });
 
