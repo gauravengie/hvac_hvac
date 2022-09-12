@@ -214,8 +214,9 @@
         
         
         
-        <li  ><a href="statistics.html">Statistics</a></li>
+
         <li  ><a href="indexc.html">Graph Visualization</a></li>
+        <li  ><a href="https://downgit.github.io/#/home?url=https://github.com/gauravjaglan/pizza-ontology/blob/master/pizza.owl" download target="_blank">Download Ontology</a></li>
 
 
 
@@ -545,13 +546,13 @@
 
 
 
-        <div class="page-header">
+<div class="page-header">
 
-            <h3>Home
+  <h3>HVAC Ontology
+  </h3>
+  <p> The use case aims at providing a smart module for an office building that optimize HVAC operation in function of real occupancy. Occupancy data are available via dedicated sensors, and the comfort and HVAC controls are available via the Building Management System (BMS) of the building. Using historical data, some learning algorithms are implemented to predict occupancy and anticipate heating and cooling period in the building and its different zones. A first optimization loop can be implemented to control the overall building occupancy planning and HVAC operation. A second optimization loop is used to adapt HVAC controls in the different zones of the building. The building manager can supervise and update some parameters in the system and access some regular assessment of the system controls. It also collects data from occupancy sensor to map the occupancy in the different zones of the building.</p>
 
-            </h3>
-
-        </div>
+</div>
 
 
 
@@ -628,104 +629,44 @@
                 
             </div>
           </div>
-           </div></div>
+           </div></div></div>
            
+      
         
-
-
-           <div class="row"><div class="col-md-12">
-              <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Metrics</h3>
+            <div class="col-md-6">
+    
+    
+                <div class="row"><div class="col-md-12">
+                    <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Entity Types</h3>
+                  </div>
+                  <div class="panel-body">
+    
+    
+                      <div class="row">
+    
+    
+                          <div class="col-md-12 ">
+                              <br />
+                              <canvas id="entitiesBarChart" ></canvas>
+                          </div>
+    
+    
+    
+                      </div>
+    
+    
+                  </div>
+                </div>
+                 </div></div>
+    
+    
+    
+    
+    
+    
             </div>
-            <div class="panel-body">
-                <dl>
-
-                 
-
-               
-
-                  
-
-                    
-
-                  
-
-                      <dt>Classes</dt>
-                      <dd>65</dd>
-
-                  
-
-                    
-
-                  
-
-                      <dt>Properties</dt>
-                      <dd>23</dd>
-
-                  
-
-                    
-
-                  
-
-                      <dt>Annotation Properties</dt>
-                      <dd>10</dd>
-
-                  
-
-                    
-
-                  
-
-                      <dt>Object Properties</dt>
-                      <dd>12</dd>
-
-                  
-
-                    
-
-                  
-
-                      <dt>Datatype Properties</dt>
-                      <dd>1</dd>
-
-                  
-
-                    
-
-                  
-
-                      <dt>Skos Concepts</dt>
-                      <dd>0</dd>
-
-                  
-
-                    
-
-                  
-
-                      <dt>Data Shapes</dt>
-                      <dd>0</dd>
-
-                  
-
-                    
-
-                  
-
-                    
-
-                </dl>
-            </div>
-          </div>
-           </div></div>
-
-
-
-
-        </div>
-         
 
 
         
@@ -818,31 +759,7 @@
                      <dt><span class="label label-info">th</span></dt>
                      <dd><a href="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#" target="_blank">https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#</a></dd>
 
-                 
-                     <dt><span class="label label-info">time</span></dt>
-                     <dd><a href="http://www.w3.org/2006/time#" target="_blank">http://www.w3.org/2006/time#</a></dd>
-
-                 
-                     <dt><span class="label label-info">vann</span></dt>
-                     <dd><a href="http://purl.org/vocab/vann/" target="_blank">http://purl.org/vocab/vann/</a></dd>
-
-                 
-                     <dt><span class="label label-info">voaf</span></dt>
-                     <dd><a href="http://purl.org/vocommons/voaf#" target="_blank">http://purl.org/vocommons/voaf#</a></dd>
-
-                 
-                     <dt><span class="label label-info">void</span></dt>
-                     <dd><a href="http://rdfs.org/ns/void#" target="_blank">http://rdfs.org/ns/void#</a></dd>
-
-                 
-                     <dt><span class="label label-info">vs</span></dt>
-                     <dd><a href="http://www.w3.org/2003/06/sw-vocab-status/ns#" target="_blank">http://www.w3.org/2003/06/sw-vocab-status/ns#</a></dd>
-
-                 
-                     <dt><span class="label label-info">xml</span></dt>
-                     <dd><a href="http://www.w3.org/XML/1998/namespace" target="_blank">http://www.w3.org/XML/1998/namespace</a></dd>
-
-                 
+                                  
                      <dt><span class="label label-info">xsd</span></dt>
                      <dd><a href="http://www.w3.org/2001/XMLSchema#" target="_blank">http://www.w3.org/2001/XMLSchema#</a></dd>
 
@@ -932,6 +849,118 @@ $('#search-input-sidebar').keyup(function() {
       return !~text.indexOf(val);
   }).hide();
 });
+
+// FIRST CHART : types of entities
+
+
+var ctx = document.getElementById("entitiesBarChart").getContext("2d");
+
+var data = {
+// labels: ["January", "February", "March", "April", "May", "June", "July"],
+labels: [
+         
+            
+        
+            
+        
+            "Classes"
+                 , 
+            
+        
+            "Platoon Classes"
+                 , 
+                          
+        
+            "Properties"
+                 , 
+            
+                    
+            "Platoon Properties"
+                 ,   
+            "Annotation Properties"
+                 , 
+            
+        
+            "Object Properties"
+                 , 
+            
+        
+            "Datatype Properties"
+                 , 
+
+            
+        
+            
+        
+],
+datasets: [
+    {
+        label: "Entities Count",
+        backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)'
+        ],
+        borderColor: [
+            'rgba(255,99,132,1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)'
+        ],
+        borderWidth: 1,
+      // data: [65, 59, 80, 81, 56, 55, 40],
+        data: [
+         
+            
+        
+            
+        
+            65
+                 , 
+            41,
+        
+            23
+                 , 
+            6,
+        
+            10
+                 , 
+            
+        
+            11
+                 , 
+            
+        
+            2
+                 , 
+            
+
+            
+        
+            
+        
+             ],
+        }
+    ]
+    };
+
+var myBarChart = new Chart(ctx, {
+type: 'bar',
+data: data,
+options: {
+    legend: {
+        display: false,
+    }
+    }
+});
+
+
+
 
 </script>
 
